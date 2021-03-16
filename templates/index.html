@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+ {% extends "layout.html" %}
+ {% block body %}
+
+<h1>Lista de Tareas</h1>
+
+<ul>
+	{%for tarea in tareas%}
+	<li>{{ tarea}}</li>
+	{%endfor%}
+</ul>
+
+<a href="{{url_for('agregar')}}">Agregar Tareal</a>
+
+
+ {% endblock %}
+</body>
+</html>
